@@ -1,0 +1,19 @@
+{
+  "name": "giggleshitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "giggleshitter.js",
+  "scripts": {
+    "dev": "npx nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-3.0-only",
+  "type": "commonjs",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "express-ws": "^5.0.2",
+    "ws": "^8.21.3"
+  }
+}

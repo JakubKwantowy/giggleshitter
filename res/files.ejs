@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Listing of - <%- path %></title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div id="content">
+            <h1>Listing of - <%- path %></h1>
+
+            <ul>
+                <% if(path !== '/') { %>
+                    <li>
+                        <a href="..">..</a>
+                    </li>
+                <% } %>
+                <% for(const e of listing) { 
+                    if(e.name.startsWith('.')) continue
+                    const name = `${e.name}${e.isDirectory() ? '/' : ''}` %>
+                    <li>
+                        <a href="<%- name %>" <% if(e.isFile()) { %> target="_blank" <% } %>><%- name %></a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </body>
+</html>
