@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Wall</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div id="content" style="text-align: center;">
+            <h1>The Wall</h1>
+
+            <p>
+                <i>All in all, it was just a brick in the wall</i>
+            </p>
+
+            <p>
+                Leave your deranged writings here for me to read at my own pleasure.
+            </p>
+
+            <form method="post" style="text-align: center;">
+                <textarea name="thewall" cols="80" rows="8"></textarea><br>
+                <button type="submit">Write on the wall</button>
+            </form>
+
+            <h2>The Wall itself</h2>
+
+            <p>
+                <i>In its cursed glory</i>
+            </p>
+
+            <textarea cols="80" rows="24" disabled><%- thewall %></textarea>
+        </div>
+    </body>
+</html>

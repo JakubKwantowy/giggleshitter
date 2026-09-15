@@ -16,9 +16,11 @@
                         <a href="..">..</a>
                     </li>
                 <% } %>
-                <% for(const e of listing) { 
+                <% for(const e of listing) { %>
+                <%
                     if(e.name.startsWith('.')) continue
-                    const name = `${e.name}${e.isDirectory() ? '/' : ''}` %>
+                    const name = `${e.name}${e.isDirectory() ? '/' : ''}` 
+                %>
                     <li>
                         <a href="<%- name %>" <% if(e.isFile()) { %> target="_blank" <% } %>><%- name %></a>
                     </li>
