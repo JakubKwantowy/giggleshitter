@@ -1,3 +1,5 @@
 node_modules/
+www/
+res/
 package-lock.json
 config.js
