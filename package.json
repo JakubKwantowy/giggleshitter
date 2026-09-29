@@ -1,10 +1,12 @@
 {
   "name": "giggleshitter",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "A dumb NodeJS multiserver.",
   "main": "giggleshitter.js",
   "scripts": {
-    "dev": "npx nodemon"
+    "start": "node .",
+    "dev": "npx nodemon",
+    "test": "echo There are no tests. && exit 1"
   },
   "keywords": [],
   "author": "",
