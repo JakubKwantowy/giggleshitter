@@ -1,4 +1,3 @@
-const express = require('express')
 const fs = require('fs')
 const ejs = require('ejs')
 const bodyParser = require('body-parser')
