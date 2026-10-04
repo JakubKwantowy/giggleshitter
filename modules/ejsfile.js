@@ -29,7 +29,7 @@ module.exports = function(serverobj, endpoint, file, data = {}) {
         const target = serverobj.relPath(file)
         const targetdir = path.dirname(target)
         const raw = fs.readFileSync(target, { encoding: 'utf-8' })
-        const rendered = ejs.render(raw, { req, res, dir: targetdir, ...data })
+        const rendered = ejs.render(raw, { req, res, __dirname: targetdir, ...data })
         res.send(rendered)
     })
 }
