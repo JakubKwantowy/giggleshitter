@@ -15,6 +15,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 const fs = require('fs')
+const path = require('path')
 const ejs = require('ejs')
 
 /**
@@ -26,8 +27,9 @@ const ejs = require('ejs')
 module.exports = function(serverobj, endpoint, file, data = {}) {
     serverobj.app.use(endpoint, (req, res) => {
         const target = serverobj.relPath(file)
+        const targetdir = path.dirname(target)
         const raw = fs.readFileSync(target, { encoding: 'utf-8' })
-        const rendered = ejs.render(raw, { req, res, ...data })
+        const rendered = ejs.render(raw, { req, res, dir: targetdir, ...data })
         res.send(rendered)
     })
 }
